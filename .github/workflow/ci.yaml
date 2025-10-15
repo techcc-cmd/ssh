@@ -1,5 +1,19 @@
 nama: Github CI pipeline testing the html file
-```yaml
-name: (moved) old/incorrect workflow file
-# This file was replaced by the corrected workflow at .github/workflows/ci.yaml
-``` 
+on: 
+  push:
+    branches:
+      - main
+  jobs: 
+      validation:
+        runs-on: ubuntu-latest
+        steps:
+          uses: actions/checkout@v4
+          - name: checkout repository
+          -name: Validate HTML file
+            run: |
+               if [ -files "index.html" ]; then
+                 echo "HTML file exists."
+               else
+                 echo "HTML file does not exist."
+                 exit 1
+               fi
