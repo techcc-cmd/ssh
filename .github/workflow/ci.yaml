@@ -1,0 +1,5 @@
+nama: Github CI pipeline testing the html file
+```yaml
+name: (moved) old/incorrect workflow file
+# This file was replaced by the corrected workflow at .github/workflows/ci.yaml
+``` 
